@@ -5,4 +5,9 @@
     width: 200px;
     height: 200px;
     box-shadow: 5px 5px 5px #56565661;
+    transition: 200ms ease-in;
+
+    &:hover {
+        transform: scale(105%, 105%);
+    }
 }

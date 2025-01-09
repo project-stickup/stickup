@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import styles from "./stickyBoardComponent.module.scss";
 import StickyNote, { Note } from "../stickyNoteComponent/stickyNoteComponent";
 
-
 type BoardState = {
   note: Note[];
 };
@@ -16,13 +15,13 @@ export default function StickyBoard({ name }: StickyBoardComponentProps) {
 
   const onClick = () => {
     console.log("test");
-    state.note.push({ text: Date.now().toLocaleString()});
-    setState({...state});
+    state.note.push({ text: Date.now().toLocaleString() });
+    setState({ ...state });
   };
 
   useEffect(() => {
-    console.log('State change!')
-  }, [state])
+    console.log("State change!");
+  }, [state]);
 
   return (
     <div className={styles.board}>
@@ -31,9 +30,11 @@ export default function StickyBoard({ name }: StickyBoardComponentProps) {
         <button onClick={onClick}>Create New Note</button>
       </div>
 
-      {state.note.map((n) => (
-        <StickyNote text={n.text}/>
-      ))}
+      <div className={styles.notesContainer}>
+        {state.note.map((n) => (
+          <StickyNote text={n.text} />
+        ))}
+      </div>
     </div>
   );
 }

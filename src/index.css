@@ -2,10 +2,24 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-
 body {
   margin: 0;
   background-color: #EEEEEE;
 }
 
+button {
+  background-color: white;
+  border: 0 solid transparent;
+  border-radius: 7px;
+  padding: 1em;
+  transition: 100ms ease-in;
+}
+
+button:hover {
+  font-weight: 700;
+  transform: scale(110%, 110%);
+}
+button:active {
+  background-color: #DDFFDD;
+}
 

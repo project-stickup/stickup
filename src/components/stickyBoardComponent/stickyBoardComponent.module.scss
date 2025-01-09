@@ -1,8 +1,14 @@
 .board {
     background-color: rgb(190, 216, 216);
-    padding: 0 0 2em;
+    padding: 1em;
 }
 .actionPanel {
-    background-color: darkslategrey;
-    padding: 2em;
+    background-color: lightslategrey;
+    padding: 1em;
+    box-shadow: inset 2px 2px 10px black;
+}
+
+.notesContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
