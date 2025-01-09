@@ -3,8 +3,8 @@
 Multi-user sticky notes app
 
 ## TODO
-- ability to create notes in an existing board
-- enable multi user environment
+- [x] ability to create notes in an existing board
+- [ ] enable multi user environment
 
 ```JavaScript
 state: {
