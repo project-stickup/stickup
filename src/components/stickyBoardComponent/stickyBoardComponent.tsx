@@ -1,18 +1,39 @@
+import { useState, useEffect } from "react";
 import styles from "./stickyBoardComponent.module.scss";
-import StickyNote from "../stickyNoteComponent/stickyNoteComponent"
+import StickyNote, { Note } from "../stickyNoteComponent/stickyNoteComponent";
+
+
+type BoardState = {
+  note: Note[];
+};
 
 type StickyBoardComponentProps = {
-    name: string;
-}
+  name: string;
+};
 
-export default function StickyBoard({name} : StickyBoardComponentProps) {
+export default function StickyBoard({ name }: StickyBoardComponentProps) {
+  const [state, setState] = useState<BoardState>({ note: [] });
+
+  const onClick = () => {
+    console.log("test");
+    state.note.push({ text: Date.now().toLocaleString()});
+    setState({...state});
+  };
+
+  useEffect(() => {
+    console.log('State change!')
+  }, [state])
+
   return (
     <div className={styles.board}>
       <h1>Sticky Board {name}</h1>
       <div className={styles.actionPanel}>
-        <button>Create New Note</button>
+        <button onClick={onClick}>Create New Note</button>
       </div>
-      <StickyNote />
+
+      {state.note.map((n) => (
+        <StickyNote text={n.text}/>
+      ))}
     </div>
   );
 }
