@@ -1,11 +1,20 @@
 .board {
-    background-color: rgb(190, 216, 216);
+    background-color: lightsteelblue;
     padding: 1em;
 }
 .actionPanel {
-    background-color: lightslategrey;
-    padding: 1em;
-    box-shadow: inset 2px 2px 10px black;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    min-width: 30vw;
+    padding: 0.5em 0.75em;
+
+    background-color: lightgray;
+    box-shadow:  2px 2px 10px black;
+
+    &:hover {
+        box-shadow: 2px 2px 10px darkslategray;
+    }
 }
 
 .notesContainer {

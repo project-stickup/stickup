@@ -12,14 +12,16 @@ button {
   border: 0 solid transparent;
   border-radius: 7px;
   padding: 1em;
-  transition: 100ms ease-in;
+  transition: 80ms ease-in;
 }
 
 button:hover {
   font-weight: 700;
-  transform: scale(110%, 110%);
+  transform: scale(105%, 105%);
+  box-shadow: 2px 2px 2px grey;
 }
 button:active {
   background-color: #DDFFDD;
+  box-shadow: inset 2px 2px 2px grey;
 }
 

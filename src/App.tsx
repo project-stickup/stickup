@@ -9,10 +9,8 @@ function App() {
 
   return (
     <>
+    <h1 className='stickupTitle'>Stickup</h1>
       <div className="card">
-        <h2>
-          Multi-user sticky notes app
-        </h2>
         <StickyBoard name="myboard1"/>
       </div>
     </>

@@ -25,9 +25,9 @@ export default function StickyBoard({ name }: StickyBoardComponentProps) {
 
   return (
     <div className={styles.board}>
-      <h1>Sticky Board {name}</h1>
+      <h2>{name}</h2>
       <div className={styles.actionPanel}>
-        <button onClick={onClick}>Create New Note</button>
+        <button onClick={onClick}>New note</button>
       </div>
 
       <div className={styles.notesContainer}>
