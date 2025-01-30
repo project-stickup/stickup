@@ -5,6 +5,7 @@ Multi-user sticky notes app
 ## TODO
 - [x] ability to create notes in an existing board
 - [ ] enable multi user environment
+  - [ ] figure out why we can't run ts-node to boot up server.ts
 - [ ] setup unit test and browser test framework
 
 ```JavaScript
