@@ -3,13 +3,23 @@
   <head>
     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
     <script>
-      const socket = io('http://localhost:8080');
+      const socket = io("http://localhost:8080/");
+
+      // receive message from current web socket room
+      socket.on("connection", () => {
+        console.log("hello user");
+      });
+
+      socket.on("serverTestEvent", (msg) => {
+        console.log(`received from server 2 ${msg}`);
+      });
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stickup</title>
   </head>
   <body>
+    <button onclick="socket.emit('testEvent', 'something')">Emit</button>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
